@@ -5,12 +5,15 @@ import App from './App';
 
 // context
 import { TaskContextProvider } from './context/TaskContext';
+import { AuthContextProvider } from './context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TaskContextProvider>
-      <App/>
-    </TaskContextProvider>
+    <AuthContextProvider>
+      <TaskContextProvider>
+        <App/>
+      </TaskContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>
 );
