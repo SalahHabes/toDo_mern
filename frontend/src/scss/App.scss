@@ -1,0 +1,150 @@
+$c_highlight: rgb(77, 24, 126);
+$c_highlight_button: rgb(102, 33, 167);
+$c_primary: white;
+$c_secendary: rgb(235, 235, 235);
+$c_font: black;
+$c_shadows: rgb(170, 170, 170);
+$c_errorMsg: rgb(214, 70, 70);
+$c_valMsg: rgb(61, 161, 61);
+$borderRadius: 3px;
+
+body {
+  margin: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+.uiButton {
+  background-color: $c_highlight;
+  border: 0;
+  border-radius: $borderRadius;
+  color: $c_primary;
+  font-size: 1rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  cursor: pointer;
+  &:hover {
+    background-color: $c_highlight_button;
+  }
+}
+
+.errorMsg {
+  color: $c_errorMsg;
+}
+
+.valMsg {
+  color: $c_valMsg;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  
+  display: flex;
+  padding: 3rem 6rem;
+  justify-content: space-between;
+}
+
+.navbar h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.navbar a {
+  color: $c_font;
+  text-decoration: none;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15rem;
+}
+
+.navbar li {
+  list-style: none;
+  padding-left: 0.4rem;
+}
+
+main {
+  background-color: $c_secendary;
+  height: 100%;
+  padding: 4rem 6rem;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.taskCard {
+  background-color: white;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  box-shadow: 1px 1px 3px $c_shadows;
+  border-radius: $borderRadius;
+  width: 50vw;
+  
+  .title {
+    color: $c_highlight;
+  }
+  
+  .cardDetails {
+    padding-left: 1rem;
+    color: rgb(80, 80, 80);
+    b {
+      color: $c_font;
+    }
+  }
+}
+
+.taskForm {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: fit-content;
+  
+  .title {
+    margin: 0;
+  }
+  
+  label {
+    margin-top: 1.5rem;
+  }
+
+  input {
+    border: 0;
+    box-shadow: 1px 1px 3px $c_shadows;
+    height: 2rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  button {
+    margin-top: 2rem;
+  }
+
+  .errorMsg {
+    margin-top: 3rem;
+  }
+}
+
+footer {
+  align-self: flex-end;
+  color: $c_shadows;
+  margin-top: auto;
+  text-align: center;
+  width: 100vw;
+}
