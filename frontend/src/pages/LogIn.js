@@ -31,7 +31,7 @@ const LogIn = () => {
             value={password}
             required/>
 
-        <button> Login </button>
+        <button disabled={isLoading}> Login </button>
         {error && <div className="errorMsg">
             {error}
         </div>}
